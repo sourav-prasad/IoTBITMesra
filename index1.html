@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+   <head>
+	  <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta name="Vikkey" content="BIT Patna Smart Room">
+	  <meta http-equiv="Access-Control-Allow-Origin" content="*">
+     
+       <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+
+      <title>BIT Smart Room</title></head>
+	  <body bgcolor="#FFE4E1">
+	  <img src="logo.png" style="float: left;" />
+
+   <center>
+		<h1 style="font-family: Helvetica;color: black;">BIT Smart Room</h1>
+	</center>
+   
+   <div class="center">
+	<div align="center" class="form">
+       <form action="" method="get">
+			  <input type="text" id="ip" class="ip" placeholder="Write API Key"></input><br>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=0" target= "_blank" class="button">Bulb1 OFF</a><br>
+              <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=1" target= "_blank" class="button">Bulb1 ON</a><br>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=0" target= "_blank" class="button">Bulb2 OFF</a><br>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=1" target= "_blank" class="button">Bulb2 ON</a>
+			  <br> 
+        </form>
+		<br><br>
+	 </div>
+	</div>
+	
+	<footer class="footer">
+		<center>
+			<h4 style="font-family: Helvetica;color: black;">&copy; 2019 | <a href="http://bitmesra.ac.in">BIT Mesra</a> | <a href="http://www.bitmesra.ac.in/Show_Department?cid=8&deptid=92">EEE Department</a> </h4>
+		</center>
+	</footer>
+ 
+    </body>
+	<script>
+		document.getElementById('D1-on').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field1=1"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		document.getElementById('D1-off').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field1=0"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		
+		document.getElementById('D2-on').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field2=1"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+		
+		document.getElementById('D2-off').addEventListener('click', function() {
+				var ip = document.getElementById('ip').value;
+				var url = "http://api.thingspeak.com/update?api_key="+ ip + "&field2=0"
+				$.getJSON(url, function(data) {
+					console.log(data);
+				});
+		});
+ 
+		
+	</script>
+</html>
