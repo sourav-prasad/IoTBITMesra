@@ -13,20 +13,19 @@
 	  <img src="logo.png" style="float: left;" />
 
    <center>
-		<h1 style="font-family: Helvetica;color: black;">BIT Patna Smart Room</h1>
+		<h1 style="font-family: Helvetica;color: black;">BIT Smart Room</h1>
 	</center>
    
    <div class="center">
 	<div align="center" class="form">
-		<form action="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=1"" method="get" target="_blank">
-         <button type="submit">Bulb1 ON</button></form><br>
-		 <form action="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=0"" method="get" target="_blank">
-         <button type="submit">Bulb1 OFF</button></form><br>
-		 <form action="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=1"" method="get" target="_blank">
-         <button type="submit">Bulb2 ON</button></form><br>
-        <form action="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=0"" method="get" target="_blank">
-         <button type="submit">Bulb2 OFF</button></form><br>
+       <form action="" method="get">
+			  <input type="text" id="ip" class="ip" placeholder="Write API Key"></input><br>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=0" target= "_blank" class="button">Bulb1 OFF</a>
+              <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field1=1" target= "_blank" class="button">Bulb1 ON</a>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=0" target= "_blank" class="button">Bulb2 OFF</a>
+			  <a href="https://api.thingspeak.com/update?api_key=QNQU0HH6Y1AKG0SK&field2=1" target= "_blank" class="button">Bulb2 ON</a>
 			  <br> 
+			  <textarea id="logger" class="ip" placeholder="LOGS" readonly></textarea>
         </form>
 		<br><br>
 	 </div>
